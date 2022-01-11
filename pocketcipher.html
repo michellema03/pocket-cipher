@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>pocket cipher</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body style="background-image:linear-gradient(#ddfffc, #f2e2ff)">
+    <p style="margin:60px;text-align:center;font-family:Courier New"> hello world! welcome to </p>
+    <p id="title"> Pocket Cipher. </p>
+    <br> <br><br><br><br><br>
+    <div style="font-family:Courier New;text-align:center;bottom:20px">
+      <p> <a href="#about"> about</a> &nbsp;&nbsp;
+      <a href="#caesar"> caesar</a> &nbsp;&nbsp; 
+      <a href="#vigenere"> vigenere</a> &nbsp;&nbsp;
+      <a href="#atbash"> atbash</a> &nbsp;&nbsp;
+      <a href="#a1z26"> a1-z26</a> &nbsp;&nbsp; </p>
+    </div>
+    <br> <br><br><br><br>
+    <p id="about"> about </p>
+    <p id="text"> Ciphers are algorithms that can encrypt and decrypt messages, used in cryptography, riddle games, or just for fun. Inspired by the many overcomplicated cipher tools online, <span style="color:#5f758d">pocket cipher</span> is a project designed to be (hopefully) simple and elegant. Just enter the information and go.</p>
+<br>
+    <p id="caesar"> caesar cipher </p>
+<div id="text">
+    <div class="popup" onclick="caesarPopup()" style="color:#5f758d;margin-left:-210px"><u>what is this?</u>
+      <span class="popuptext" id="caesarPopup">First used by Julius Caesar, the Caesar cipher is a simple encryption technique where each letter in a message is shifted a fixed value along the alphabet. To use this shifter, enter the message and the amount to be shifted <b>down</b> the alphabet. For decrypting, if the shift value is known, simply enter its negative value to reveal the decrypted text :)</span>
+    </div>
+
+    <p>message: <input type="text" style="font-family: Courier New" id="cmessage" /> </p>
+    <p>shift: <input type="text" style="font-family: Courier New" id="cshift" /> </p>
+    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="caesarDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="canswer" readonly="readonly"/> </p>
+    </div>
+ </div>
+
+    <p id="vigenere"> vigenère cipher </p>
+<div id="text">
+      <div class="popup" onclick="vigePopup()" style="color:#5f758d;margin-left:-210px"><u>what is this?</u>
+      <span class="popuptext" id="vigePopup">A Vigenère cipher is very similar to a Caesar cipher, but instead of a fixed shift value, the Vigenère uses a <b>keyword</b> instead. Each letter of the message is shifted with respect to the corresponding letter in the keyword (which repeats until the message ends). To use this shifter to encrypt, enter the message and the keyword. Decrypting coming soon!</span>
+    </div>
+
+    <p>message: <input type="text" style="font-family: Courier New" id="vmessage" /> </p>
+    <p>keyword: <input type="text" style="font-family: Courier New" id="vshift" /> </p>
+    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="vigeDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="vanswer" readonly="readonly"/> </p>
+    </div>
+</div>
+
+<p id="atbash"> atbash cipher </p>
+<div id="text">
+      <div class="popup" onclick="atbPopup()" style="color:#5f758d;margin-left:-210px"><u>what is this?</u>
+      <span class="popuptext" id="atbPopup">Originally used in the Hebrew alphabet, the Atbash cipher does not use shifts; instead, the Atbash uses an "inverse" alphabet to encode (and decode!) a message. A turns into Z, M turns into N, and so on. Since this process is symmetrical, decrypting and encrypting is the same.</span>
+    </div>
+
+    <p>message: <input type="text" style="font-family: Courier New" id="amessage" /> </p>
+    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="atbDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; font-size:20px; text-align:center; font-size:25px" type="text" id="aanswer" readonly="readonly"/> </p>
+    </div>
+</div>
+
+<p id="a1z26"> a1-z26 cipher </p>
+<div id="text">
+      <div class="popup" onclick="a1Popup()" style="color:#5f758d;margin-left:-300px"><u>what is this?</u>
+      <span class="popuptext" id="a1Popup">The A1-Z26 cipher is a very simple substitution cipher, where each letter is replaced with its corresponding index in the alphabet, starting on 1. For decrypting, please separate numbers with a space, and words by a forward slash.</span>
+    </div>
+
+    <p>encrypt message: <input type="text" style="font-family: Courier New" id="a1encrypt" /> </p>
+    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="a1Encrypt()" /> </p>
+    <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="a1encrypted" readonly="readonly"/> </p>
+
+    <p>decrypt message: <input type="text" style="font-family: Courier New" id="a1decrypt" /> </p>
+    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="a1Decrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="a1decrypted" readonly="readonly"/> </p>
+    </div>
+</div>
+<br>
+    <div style="font-family:Courier New;text-align:center;bottom:20px; font-size:18px">
+      <p> made by michelle ma </p>
+      <p> email: <a href="mailto: michellema03@gmail.com">michellema03@gmail.com</a> </p>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
