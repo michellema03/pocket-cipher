@@ -1,1 +1,1 @@
-# pocket-cipher
+encrypt/decrypt ciphers quickly and easily 🔑
