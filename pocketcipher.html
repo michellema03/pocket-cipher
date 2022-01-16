@@ -27,9 +27,10 @@
       <span class="popuptext" id="caesarPopup">First used by Julius Caesar, the Caesar cipher is a simple encryption technique where each letter in a message is shifted a fixed value along the alphabet. To use this shifter, enter the message and the amount to be shifted <b>down</b> the alphabet. For decrypting, if the shift value is known, simply enter its negative value to reveal the decrypted text :)</span>
     </div>
 
-    <p>message: <input type="text" style="font-family: Courier New" id="cmessage" /> </p>
-    <p>shift: <input type="text" style="font-family: Courier New" id="cshift" /> </p>
-    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="caesarDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="canswer" readonly="readonly"/> </p>
+    <p>message: <input type="text" class="normal"  id="cmessage" /> </p>
+    <p>shift: <input type="text" class="normal"  id="cshift" /> </p>
+    <p> <input type="button" class="normal" value="go!" onclick="caesarDecrypt()" /> </p>
+    <p> <input type="text" id="canswer" readonly="readonly"/> </p>
     </div>
  </div>
 
@@ -39,9 +40,10 @@
       <span class="popuptext" id="vigePopup">A Vigenère cipher is very similar to a Caesar cipher, but instead of a fixed shift value, the Vigenère uses a <b>keyword</b> instead. Each letter of the message is shifted with respect to the corresponding letter in the keyword (which repeats until the message ends). To use this shifter to encrypt, enter the message and the keyword. Decrypting coming soon!</span>
     </div>
 
-    <p>message: <input type="text" style="font-family: Courier New" id="vmessage" /> </p>
-    <p>keyword: <input type="text" style="font-family: Courier New" id="vshift" /> </p>
-    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="vigeDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="vanswer" readonly="readonly"/> </p>
+    <p>message: <input type="text" class="normal" id="vmessage" /> </p>
+    <p>keyword: <input type="text" class="normal" id="vshift" /> </p>
+    <p> <input type="button" class="normal" value="go!" onclick="vigeDecrypt()" /> </p>
+    <p><input type="text" id="vanswer" readonly="readonly"/> </p>
     </div>
 </div>
 
@@ -51,10 +53,11 @@
       <span class="popuptext" id="atbPopup">Originally used in the Hebrew alphabet, the Atbash cipher does not use shifts; instead, the Atbash uses an "inverse" alphabet to encode (and decode!) a message. A turns into Z, M turns into N, and so on. Since this process is symmetrical, decrypting and encrypting is the same.</span>
     </div>
 
-    <p>message: <input type="text" style="font-family: Courier New" id="amessage" /> </p>
-    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="atbDecrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; font-size:20px; text-align:center; font-size:25px" type="text" id="aanswer" readonly="readonly"/> </p>
+    <p>message: <input type="text" class="normal" id="amessage" /> </p>
+    <p> <input type="button" class="normal" value="go!" onclick="atbDecrypt()" /> </p>
+    <p> <input type="text" id="aanswer" readonly="readonly"/> </p>
     </div>
-</div>
+  </div>
 
 <p id="a1z26"> a1-z26 cipher </p>
 <div id="text">
@@ -62,12 +65,12 @@
       <span class="popuptext" id="a1Popup">The A1-Z26 cipher is a very simple substitution cipher, where each letter is replaced with its corresponding index in the alphabet, starting on 1. For decrypting, please separate numbers with a space, and words by a forward slash.</span>
     </div>
 
-    <p>encrypt message: <input type="text" style="font-family: Courier New" id="a1encrypt" /> </p>
-    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="a1Encrypt()" /> </p>
-    <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="a1encrypted" readonly="readonly"/> </p>
+    <p>encrypt message: <input type="text" class="normal"  id="a1encrypt" /> </p>
+    <p> <input type="button" class="normal"  value="go!" onclick="a1Encrypt()" /> </p>
+    <p> <input type="text" id="a1encrypted" readonly="readonly"/> </p>
 
-    <p>decrypt message: <input type="text" style="font-family: Courier New" id="a1decrypt" /> </p>
-    <p> <input type="button" style="font-family: Courier New; font-size:25px" value="go!" onclick="a1Decrypt()" /> </p> <p> <input style="border:0;background:transparent; font-family: Courier New; width:90%; text-align:center; font-size:25px" type="text" id="a1decrypted" readonly="readonly"/> </p>
+    <p>decrypt message: <input type="text" class="normal"  id="a1decrypt" /> </p>
+    <p> <input type="button" class="normal" value="go!" onclick="a1Decrypt()" /> </p> <p> <input type="text" id="a1decrypted" readonly="readonly"/> </p>
     </div>
 </div>
 <br>
